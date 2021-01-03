@@ -107,12 +107,12 @@ p {
   background: transparent !important;
   width: 12px;
   height: 12px;
-  border: 2px solid #ffa687;
+  border: 2px solid var(--roza);
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 
 /* Track */
@@ -218,7 +218,6 @@ p {
 
 /*========================= 3, Search Layout =========================*/
 .search__layout {
-  background-color: var(--white);
   position: fixed;
   top: 0;
   left: -100%;
