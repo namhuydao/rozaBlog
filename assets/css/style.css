@@ -20,10 +20,15 @@
 8, Footer
 9, To Top
 */
+
 /*========================= 1, Settings =========================*/
 * {
   padding: 0;
   margin: 0;
+}
+*::selection{
+  background-color: var(--roza);
+  color: var(--white);
 }
 :root {
   --roza: #ffa687;
