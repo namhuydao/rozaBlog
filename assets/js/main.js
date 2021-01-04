@@ -23,9 +23,6 @@ menuSearch.addEventListener('click', () => {
 searchClose.addEventListener('click', () => {
   searchLayout.classList.remove("show")
 });
-window.addEventListener('scroll', () => {
-  header.classList.toggle('sticky', window.scrollY > 0)
-})
 dropdownLv2.forEach(item => {
   item.addEventListener('click', () => {
     item.lastElementChild.classList.toggle("show")
@@ -66,5 +63,6 @@ toTop.addEventListener('click', () => {
 
 // Window onscroll
 window.addEventListener('scroll', () => {
+  header.classList.toggle('sticky', window.scrollY > 0)
   toTop.classList.toggle('show', window.scrollY > 300)
 })
