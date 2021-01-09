@@ -1,7 +1,7 @@
 /*
     Theme name: Roza Blog
     Theme Description: .....
-    Author: Dao Nam Huy
+    Author: Nam Huy Dao
     Version: 1.0.0
 */
 /* 
@@ -25,6 +25,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 *::selection{
   background-color: var(--roza);
@@ -33,7 +34,6 @@
 :root {
   --roza: #ffa687;
   --black: #222222;
-  --lightRoza: #ffe6dd;
   --backgroundGray: #efefef;
   --white: #ffffff;
 }
@@ -78,9 +78,6 @@ p {
 }
 .colorBlack {
   color: var(--black);
-}
-.colorLightRoza {
-  color: var(--lightRoza);
 }
 .horizontal__bar {
   height: 3px;
@@ -559,7 +556,7 @@ p {
   align-items: center;
   justify-content: space-between;
   border-top: 1px dashed #eee;
-  border-bottom: 3px solid var(--lightRoza);
+  border-bottom: 3px solid var(--roza);
   font-size: 13px;
 }
 .feature__item .action a:hover i{
