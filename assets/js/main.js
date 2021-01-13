@@ -1,33 +1,23 @@
 // Header
-let bar = document.querySelector(".header__menu-bar");
-let menuMobile = document.querySelector(".menu-list-mobile");
-let menuClose = document.querySelector(".menu-close");
-let wrapper = document.querySelector(".wrapper");
-let header = document.querySelector(".header");
-let menuSearch = document.querySelector(".menu-search");
-let searchClose = document.querySelector(".search-close");
-let searchLayout = document.querySelector(".search__layout");
-let dropdownLv2 = document.querySelectorAll(".dropdown-lv2");
-
-bar.addEventListener('click', () => {
-  menuMobile.classList.add('show')
-  wrapper.classList.add("show")
+$('.header__menu-bar').click(function() {
+  $('.menu-list-mobile').addClass('show')
+  $('.wrapper').addClass("show")
 });
-menuClose.addEventListener('click', () => {
-  menuMobile.classList.remove('show')
-  wrapper.classList.remove("show")
+$('.menu-close').click(function() {
+  $('.menu-list-mobile').removeClass('show')
+  $('.wrapper').removeClass("show")
 });
-menuSearch.addEventListener('click', () => {
-  searchLayout.classList.add("show")
+$('.menu-search').click(function(){
+  $('search__layout').addClass("show")
 });
-searchClose.addEventListener('click', () => {
-  searchLayout.classList.remove("show")
+$('.fa-times').click(function() {
+  $('search__layout').removeClass("show")
 });
-dropdownLv2.forEach(item => {
-  item.addEventListener('click', () => {
-    item.lastElementChild.classList.toggle("show")
-  });
-});
+$('.dropdown-lv2').each(function(){
+  $(this).click(function(){
+    $(this).children().last().toggleClass('show')
+  })
+})
 
 // Slider
 $(".slider__carousel").owlCarousel({
@@ -53,8 +43,7 @@ $(".slider__carousel").owlCarousel({
 })
 
 // To Top Button
-let toTop = document.querySelector(".toTop");
-toTop.addEventListener('click', () => {
+$(".toTop").click(function(){
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
@@ -62,7 +51,7 @@ toTop.addEventListener('click', () => {
 })
 
 // Window onscroll
-window.addEventListener('scroll', () => {
-  header.classList.toggle('sticky', window.scrollY > 0)
-  toTop.classList.toggle('show', window.scrollY > 300)
+$(window).scroll(function() {
+  $('.header').toggleClass('sticky', window.scrollY > 0)
+  $('.toTop').toggleClass('show', window.scrollY > 300)
 })
