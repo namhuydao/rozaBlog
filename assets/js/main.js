@@ -8,10 +8,10 @@ $('.menu-close').click(function() {
   $('.wrapper').removeClass("show")
 });
 $('.menu-search').click(function(){
-  $('search__layout').addClass("show")
+  $('.search__layout').addClass("show")
 });
 $('.fa-times').click(function() {
-  $('search__layout').removeClass("show")
+  $('.search__layout').removeClass("show")
 });
 $('.dropdown-lv2').each(function(){
   $(this).click(function(){
